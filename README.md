@@ -33,14 +33,20 @@ Ubuntu 20.04 & InfluxDB & Grafana
 
 - Ubuntu Installation
 - InfluxDB Installation
-Debian and Ubuntu users can install the latest stable version of InfluxDB using the apt-get package manager.
 
-For Ubuntu users, add the InfluxData repository with the following commands:
+According to the performance needs, InfluxDB can be installed on separate servers in an scalable cluster structure. We are running on the same server in a simple structure.
 
-Add Repository
+Ubuntu users can install the latest stable version of InfluxDB using the apt-get package manager.
+
+Add the InfluxData repository with the following commands:
 ```
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 source /etc/lsb-release
 echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 ```
-
+Then, install and start the InfluxDB service:
+```
+sudo apt-get update && sudo apt-get install influxdb
+sudo systemctl enable influxdb
+sudo systemctl start influxdb
+```
