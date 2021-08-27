@@ -100,7 +100,7 @@ sudo systemctl status influxdb
 **PS:** Don't forget to define the required ubuntu OS firewall (ufw) permissions.
 - **Grafana Installation**
 
-To install the latest OSS release:
+Install the latest OSS release:
 ```
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y software-properties-common wget
