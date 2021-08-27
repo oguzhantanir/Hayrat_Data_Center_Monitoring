@@ -18,6 +18,7 @@ Components And Supplies
 Optional
 - LCD I2C 16x2
 
+##############
 
 Arduino Libraries
 - EthernetENC (https://github.com/jandrassy/EthernetENC) We used this library because it uses less memory. Alternatively you can use UIPEthernet library.
