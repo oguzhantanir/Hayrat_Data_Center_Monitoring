@@ -3,11 +3,11 @@ Data Center Temperature, Humidity, DewPoint, Cabinet Door Access, Voice, Light a
 This project is the cheapest monitoring solution in the world. :) It can be scalable using multiple base units and aggregate in a central database. Different sensors can be added and Thousands of sensors can be tracked. Have a good time!
 
 ## Requirements
-Software Requirements
+**Software Requirements**
 - InfluxDB (Time Series Database)
 - Grafana (Dashboard)
 
-Components And Supplies
+**Components And Supplies**
 - Arduino Mega 2560
 - ENC28J60 Network Module
 - DHT11 Sensor
@@ -31,8 +31,8 @@ Optional
 ## Installation
 Ubuntu 20.04 & InfluxDB & Grafana
 
-- Ubuntu Installation
-- InfluxDB Installation
+- **Ubuntu Installation**
+- **InfluxDB Installation**
 
 According to the performance needs, InfluxDB can be installed on separate servers in an scalable cluster structure. Now we are running on the same server in a simple structure.
 
@@ -95,6 +95,6 @@ And check status running
 ```
 sudo systemctl status influxdb
 ```
-PS: Don't forget to define the required ubuntu OS firewall (ufw) permissions.
-- Grafana Installation
+**PS:** Don't forget to define the required ubuntu OS firewall (ufw) permissions.
+- **Grafana Installation**
 
