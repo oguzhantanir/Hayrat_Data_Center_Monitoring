@@ -2,8 +2,8 @@
 Data Center Temperature, Humidity, DewPoint, Cabinet Door Access, Voice, Light and Water Sensor Monitoring on Grafana Dashboard.
 
 Software Requirements
-- InfluxDB
-- Grafana
+- InfluxDB (Time Series Database)
+- Grafana (Dashboard)
 
 Components And Supplies
 - Arduino Mega 2560
