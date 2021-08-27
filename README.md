@@ -55,7 +55,7 @@ Run the 'influx' command below.
 ```
 influx
 ```
-Create an InfluxDB user and database
+Create an InfluxDB user and database.
 ```
 create database HayratDB
 create user hayrat with password 'blablabla'
@@ -66,7 +66,12 @@ Now check the database and user.
 show databases
 show users
 ```
-Create a retention policy
+Create a retention policy.
+```
+CREATE RETENTION POLICY thirty_days ON HayratDB DURATION 30d REPLICATION 1 DEFAULT
+SHOW RETENTION POLICIES ON HayratDB
+```
+Done. Next step;
 
 By default InfluxDB using TCP 8086 port but we will use UDP 8089. For this, we will edit the InfluxDB configuration file.
 
@@ -91,4 +96,5 @@ And check status running
 sudo systemctl status influxdb
 ```
 PS: Don't forget to define the required ubuntu OS firewall (ufw) permissions.
+- Grafana Installation
 
