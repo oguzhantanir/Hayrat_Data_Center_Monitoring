@@ -50,3 +50,25 @@ sudo apt-get update && sudo apt-get install influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
 ```
+By default InfluxDB using TCP 8086 port but we will use UDP 8089. For this, we will edit the InfluxDB configuration file.
+
+Edit: /etc/influxdb/influxdb.conf
+```
+[[udp]]
+  enabled = true
+  bind-address = ":8089" # the bind address
+  database = "HayratDB" # Name of the database that will be written to
+  precision = "s"
+  batch-size = 5000 # will flush if this many points get buffered
+  batch-timeout = "1s" # will flush at least this often even if the batch-size is not reached
+  batch-pending = 10 # number of batches that may be pending in memory
+  read-buffer = 0
+```
+Restart InfluxDB service
+```
+sudo systemctl restart influxdb
+```
+And check status running
+```
+sudo systemctl status influxdb
+```
