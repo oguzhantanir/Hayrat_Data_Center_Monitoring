@@ -25,7 +25,7 @@ Optional
 - LiquidCrystal_I2C (https://github.com/johnrickman/LiquidCrystal_I2C) If you use the LCD should be used this library. (Not required)
 - DHT11 (https://github.com/oguzhantanir/Hayrat_Data_Center_Monitoring/tree/main/DHT11)
 
- Alternative ENC28J60 Library
+ **Alternative ENC28J60 Library**
 - UIPEthernet (https://github.com/UIPEthernet/UIPEthernet)
 
 ## Installation
