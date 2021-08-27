@@ -1,6 +1,6 @@
 /*####################################################################
  FILE: dht11_functions.pde - DHT11 Usage Demo.
- VERSION: 2S0A
+ VERSION: 2S0A 
 
  PURPOSE: Measure and return temperature & Humidity. Additionally provides conversions.
 
