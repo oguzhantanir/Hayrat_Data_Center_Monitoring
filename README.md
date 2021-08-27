@@ -50,6 +50,24 @@ sudo apt-get update && sudo apt-get install influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
 ```
+InfluxDB provides the CLI tool named 'influx' for interacting with an InfluxDB server.
+Run the 'influx' command below.
+```
+influx
+```
+Create an InfluxDB user and database
+```
+create database HayratDB
+create user hayrat with password 'blablabla'
+grant all on HayratDB to hayrat
+```
+Now check the database and user.
+```
+show databases
+show users
+```
+Create a retention policy
+
 By default InfluxDB using TCP 8086 port but we will use UDP 8089. For this, we will edit the InfluxDB configuration file.
 
 Edit: /etc/influxdb/influxdb.conf
@@ -72,3 +90,5 @@ And check status running
 ```
 sudo systemctl status influxdb
 ```
+PS: Don't forget to define the required ubuntu OS firewall (ufw) permissions.
+
