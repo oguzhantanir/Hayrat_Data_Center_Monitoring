@@ -1,9 +1,9 @@
-# Hayrat_Data_Center_Monitoring
+# Hayrat Data Center Monitoring
 Data Center Temperature, Humidity, DewPoint, Cabinet Door Access, Voice, Light and Water Sensor Monitoring on Grafana Dashboard.
 This project is the cheapest monitoring solution in the world. :) It can be scalable using multiple base units and aggregate in a central database. Different sensors can be added and Thousands of sensors can be tracked. Have a good time!
 
 # Requirements
-Software Requirement
+Software Requirements
 - InfluxDB (Time Series Database)
 - Grafana (Dashboard)
 
@@ -34,7 +34,7 @@ Ubuntu 20.04 & InfluxDB & Grafana
 - Ubuntu Installation
 - InfluxDB Installation
 
-According to the performance needs, InfluxDB can be installed on separate servers in an scalable cluster structure. We are running on the same server in a simple structure.
+According to the performance needs, InfluxDB can be installed on separate servers in an scalable cluster structure. Now we are running on the same server in a simple structure.
 
 Ubuntu users can install the latest stable version of InfluxDB using the apt-get package manager.
 
