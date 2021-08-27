@@ -1,6 +1,6 @@
 # Hayrat_Data_Center_Monitoring
 Data Center Temperature, Humidity, DewPoint, Cabinet Door Access, Voice, Light and Water Sensor Monitoring on Grafana Dashboard.
-This project is the cheapest monitoring solution in the world. :) It can be scalable using multiple base units and aggregate in a central database. Thousands of sensors can be tracked. Have a good time!
+This project is the cheapest monitoring solution in the world. :) It can be scalable using multiple base units and aggregate in a central database. Different sensors can be added and Thousands of sensors can be tracked. Have a good time!
 
 Software Requirements
 - InfluxDB (Time Series Database)
