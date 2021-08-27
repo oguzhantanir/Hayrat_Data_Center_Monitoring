@@ -9,6 +9,7 @@ Components And Supplies
 - Lever Switch
 - LDR Light Sensor
 - Sound Sensor
+- Water Sensor
 Optional
 - LCD I2C 16x2
 
