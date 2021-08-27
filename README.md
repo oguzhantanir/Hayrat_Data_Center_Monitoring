@@ -18,4 +18,7 @@ Components And Supplies
 Optional
 - LCD I2C 16x2
 
-
+Arduino Libraries
+- EthernetENC (https://github.com/jandrassy/EthernetENC)
+or
+- UIPEthernet (https://github.com/UIPEthernet/UIPEthernet)
