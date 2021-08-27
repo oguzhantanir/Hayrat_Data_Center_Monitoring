@@ -19,6 +19,7 @@ Optional
 - LCD I2C 16x2
 
 Arduino Libraries
-- EthernetENC (https://github.com/jandrassy/EthernetENC)
-or
+- EthernetENC (https://github.com/jandrassy/EthernetENC) We used this library because it uses less memory.
+
+Alternative ENC28J60 Library
 - UIPEthernet (https://github.com/UIPEthernet/UIPEthernet)
