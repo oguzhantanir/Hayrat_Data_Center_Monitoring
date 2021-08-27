@@ -100,3 +100,26 @@ sudo systemctl status influxdb
 **PS:** Don't forget to define the required ubuntu OS firewall (ufw) permissions.
 - **Grafana Installation**
 
+To install the latest OSS release:
+```
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y software-properties-common wget
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+Add this repository for stable releases:
+```
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```
+Then install Grafana:
+```
+sudo apt-get update
+sudo apt-get install grafana
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+```
+And check status running
+```
+systemctl status grafana-server
+```
+You can access the Grafana Dashboard using the URL http://your-server-ip:3000/
+
