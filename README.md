@@ -10,6 +10,7 @@ Components And Supplies
 - LDR Light Sensor
 - Sound Sensor
 - Water Sensor
+
 Optional
 - LCD I2C 16x2
 
