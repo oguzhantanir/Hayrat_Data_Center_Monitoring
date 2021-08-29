@@ -36,7 +36,7 @@ Ubuntu 20.04 & InfluxDB & Grafana
 Standart Ubuntu server installation (https://ubuntu.com/tutorials/install-ubuntu-server)
 - **InfluxDB Installation**
 
-According to the performance needs, InfluxDB can be installed on separate servers in an scalable cluster structure. Now we are running on the same server in a simple structure.
+According to the performance needs, InfluxDB can be installed on separate servers in a scalable cluster structure. Now we are running on the same server in a simple structure.
 
 Ubuntu users can install the latest stable version of InfluxDB using the apt-get package manager.
 
