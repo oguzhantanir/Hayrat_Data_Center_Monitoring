@@ -17,6 +17,8 @@ This project is the cheapest monitoring solution in the world. :) It can be scal
 - Sound Sensor
 - Water Sensor
 
+If you want to choose  more better professional sensor.
+
 Optional
 - LCD I2C 16x2
 
