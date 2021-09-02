@@ -61,9 +61,9 @@ void setup() {
   Serial.begin(9600);
 
   uint8_t mac[6] = {0x74,0x69,0x69,0x2D,0x30,0x61};
-  IPAddress ip(192,168,0,166);
-  IPAddress gateway(192, 168, 0, 1);
-  IPAddress subnet(255, 255, 255, 0);
+  IPAddress ip(192,168,0,166);  //Arduino IP adress, change IP to our network IP address
+  IPAddress gateway(192, 168, 0, 1);  //Change gateway to our network gateway address
+  IPAddress subnet(255, 255, 255, 0);  ////Change subnet to our network subnet address
   IPAddress dnsServer(8, 8, 8, 8);
 
   Ethernet.begin(mac, ip, dnsServer, gateway, subnet);
@@ -187,7 +187,7 @@ void loop() {
       Water_Sensor6 = digitalRead(Water_Sensor6_PIN);
       
       Serial.println();
-      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet
+      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet, change IP to our InfluxDB address
       Serial.print("beginPacket: ");
       Serial.println(success ? "success" : "failed");
       
@@ -225,7 +225,7 @@ void loop() {
       Door_Switch2 = digitalRead(Door_Switch2_PIN);
 
       Serial.println();
-      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet
+      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet, change IP to our InfluxDB address
       Serial.print("beginPacket: ");
       Serial.println(success ? "success" : "failed");
 
@@ -267,7 +267,7 @@ void loop() {
       Door_Switch4 = digitalRead(Door_Switch4_PIN);
 
       Serial.println();
-      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet
+      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet, change IP to our InfluxDB address
       Serial.print("beginPacket: ");
       Serial.println(success ? "success" : "failed");
       
@@ -308,7 +308,7 @@ void loop() {
       Door_Switch6 = digitalRead(Door_Switch6_PIN);
 
       Serial.println();
-      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet
+      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet, change IP to our InfluxDB address
       Serial.print("beginPacket: ");
       Serial.println(success ? "success" : "failed");
       
@@ -349,7 +349,7 @@ void loop() {
       Door_Switch8 = digitalRead(Door_Switch8_PIN);
 
       Serial.println();
-      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet
+      success = udp.beginPacket(IPAddress(192,168,0,160),8089);  //InfluxDB UDP sending packet, change IP to our InfluxDB address
       Serial.print("beginPacket: ");
       Serial.println(success ? "success" : "failed");
       
