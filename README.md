@@ -169,5 +169,6 @@ time                FrontDewpoint FrontDoor FrontHumidity FrontTemperature Hall_
 ```
 **PS:** Result name "Measurements" will be your changed DC name in Arduino code. In this case, you will need to fix it in the dashboard template.
 
-Yes, monitoring dashboard is working! Congratulations!
-Great job :)
+Yes, monitoring dashboard is working!
+#### Congratulations! 
+### Great job :)
