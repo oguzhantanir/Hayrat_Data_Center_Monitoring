@@ -167,7 +167,7 @@ time                FrontDewpoint FrontDoor FrontHumidity FrontTemperature Hall_
 1630593952000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
 1630593953000000000 0             0         0             0                Cabinet2 0            0        0            0
 ```
-**PS:** Result name "Measurements" will be your changed DC name in Arduino code. In this case, you will need to fix it in the dashboard template.
+**PS:** Result name "Measurements" will be your changed DC name in Arduino code. In this case, you will need to fix it in the grafana dashboard.
 
 Yes, monitoring dashboard is working!
 #### Congratulations! 
