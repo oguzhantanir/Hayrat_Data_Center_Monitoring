@@ -125,9 +125,43 @@ systemctl status grafana-server
 ```
 You can access the Grafana Dashboard using the URL http://your-server-ip:3000/
 
-Add data source InfluxDB on Grafana and import to json dasboard file Grafana_Hayrat_Data_Center_Monitoring_V1.json.
+Add data source InfluxDB on Grafana and import to json dasboard file "Grafana_Hayrat_Data_Center_Monitoring_V1.json".
 - **Arduino Installation**
 
-Next step: Replace your own ip address in "Arduino_Mega_Code.ino" code. Connect all sensors as shown in the "Hayrat_Components_Connettions" diagram and upload code to Arduino Mega. Then, ENC28J60 module connect to the network.
+Next step: Replace your own ip address and data center names in "Arduino_Mega_Code.ino" code. Connect all sensors as shown in the "Hayrat_Components_Connettions" diagram and upload code to Arduino Mega. Then, ENC28J60 module connect to the network.
 
-**PS:** Make sure Arduino is network communicating with the InfluxDB server.
+**PS:** Make sure Arduino is network communicating with the InfluxDB server. Lever switch sensor and water sensor must be connected to "pull down".
+
+If everything is ok, you should be see data in InfluxDB.
+Run the below commands on linux CLI.
+```
+influx
+use HayratDB
+SELECT * FROM DC_Istanbul_Cabinet WHERE time > now() - 1m LIMIT 20
+```
+The result should be as belows.
+```
+name: DC_Istanbul_Cabinet
+time                FrontDewpoint FrontDoor FrontHumidity FrontTemperature Hall_1   RearDewpoint RearDoor RearHumidity RearTemperature
+----                ------------- --------- ------------- ---------------- ------   ------------ -------- ------------ ---------------
+1630593921000000000 0             0         0             0                Cabinet3 0            0        0            0
+1630593922000000000 0             0         0             0                Cabinet4 0            0        0            0
+1630593925000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
+1630593926000000000 0             0         0             0                Cabinet2 0            0        0            0
+1630593928000000000 0             0         0             0                Cabinet3 0            0        0            0
+1630593929000000000 0             0         0             0                Cabinet4 0            0        0            0
+1630593932000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
+1630593933000000000 0             0         0             0                Cabinet2 0            0        0            0
+1630593934000000000 0             0         0             0                Cabinet3 0            0        0            0
+1630593936000000000 0             0         0             0                Cabinet4 0            0        0            0
+1630593938000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
+1630593940000000000 0             0         0             0                Cabinet2 0            0        0            0
+1630593941000000000 0             0         0             0                Cabinet3 0            0        0            0
+1630593942000000000 0             0         0             0                Cabinet4 0            0        0            0
+1630593945000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
+1630593946000000000 0             0         0             0                Cabinet2 0            0        0            0
+1630593948000000000 0             0         0             0                Cabinet3 0            0        0            0
+1630593949000000000 0             0         0             0                Cabinet4 0            0        0            0
+1630593952000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
+1630593953000000000 0             0         0             0                Cabinet2 0            0        0            0
+```
