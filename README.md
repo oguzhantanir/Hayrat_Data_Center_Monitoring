@@ -125,3 +125,9 @@ systemctl status grafana-server
 ```
 You can access the Grafana Dashboard using the URL http://your-server-ip:3000/
 
+Add data source InfluxDB on Grafana and import to json dasboard file Grafana_Hayrat_Data_Center_Monitoring_V1.json.
+- **Arduino Installation**
+
+Next step: Replace your own ip address in "Arduino_Mega_Code.ino" code. Connect all sensors as shown in the "Hayrat_Components_Connettions" diagram and upload code to Arduino Mega. Then, ENC28J60 module connect to the network.
+
+**PS:** Make sure Arduino is network communicating with the InfluxDB server.
