@@ -132,8 +132,10 @@ Next step: Replace your own ip address and data center names in "Arduino_Mega_Co
 
 **PS:** Make sure Arduino is network communicating with the InfluxDB server. Lever switch sensor and water sensor must be connected to "pull down".
 
-If everything is ok, you should be see data in InfluxDB.
-Run the below commands on linux CLI.
+## Finally
+
+If everything is ok, you should be see the data in InfluxDB.
+Run the below commands on Linux CLI.
 ```
 influx
 use HayratDB
@@ -165,3 +167,7 @@ time                FrontDewpoint FrontDoor FrontHumidity FrontTemperature Hall_
 1630593952000000000 14.15         1         38            30               Cabinet1 13.32        0        36           30
 1630593953000000000 0             0         0             0                Cabinet2 0            0        0            0
 ```
+**PS:** Result name "Measurements" will be your changed DC name in Arduino code. In this case, you will need to fix it in the dashboard template.
+
+Yes, monitoring dashboard is working! Congratulations!
+Great job :)
